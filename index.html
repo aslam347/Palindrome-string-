@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Palindrome Checker</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Enter the Word">
+        </div>
+        <div>
+            <button type="submit" onclick="checking()">Check</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+      function checking(){
+let entervalue = document.getElementById("input").value
+
+let reversed  = [...entervalue].reverse().join("");
+
+if(reversed == entervalue){
+    
+
+    let result =  document.getElementById('result')
+    result.innerHTML =reversed +"  "+"is Palindrome"
+}
+else{
+    
+
+    let result =  document.getElementById('result')
+    result.innerHTML = reversed +"  "+ "is Not a Palindrome"
+}
+ 
+      }
+    </script>
+</body>
+</html>
